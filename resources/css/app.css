@@ -4,9 +4,8 @@
 
 
 @layer base {
-    @font-face {
-        font-family: "Nimbus";
-        font-weight: 500;
-        src: url('/fonts/NimbusSansNovusT_Black.ttf') format("ttf")
-    }
+
+    /*body{
+        font-family: 'nimbus', sans;
+    }*/
 }
