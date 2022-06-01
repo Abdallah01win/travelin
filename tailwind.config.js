@@ -13,6 +13,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                marc: "'Marcellus', serif",
+                nimbus: ['Nimbus', ...defaultTheme.fontFamily.sans],
             },
         },
     },
