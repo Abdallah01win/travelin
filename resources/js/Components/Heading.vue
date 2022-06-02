@@ -48,7 +48,7 @@
           </div>
         </div>
         <button
-          class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 text-xl font-medium"
+          class="text-white bg-green-500 border-0 py-2 px-10 focus:outline-none hover:bg-green-600 text-2xl font-medium"
         >
           Discover
         </button>
