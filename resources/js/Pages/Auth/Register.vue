@@ -26,7 +26,10 @@ const submit = () => {
     <Head title="Register" />
 
     <BreezeValidationErrors class="mb-4" />
-
+    <div class="text-3xl text-gray-900 font-marc my-3 font-semibold">
+      Welcome To Travelin
+    </div>
+    <p class="text-base text-gray-600 mb-5">Please enter your details.</p>
     <form @submit.prevent="submit">
       <div>
         <BreezeLabel for="name" value="Name" />
@@ -77,19 +80,19 @@ const submit = () => {
         />
       </div>
 
-      <div class="flex items-center justify-between mt-6">
-        <Link :href="route('login')" class="underline leading-7 text-base text-gray-600">
-          Already registered?
-        </Link>
+      <!-- <div class="flex items-center justify-between mt-6"> -->
 
-        <BreezeButton
-          class="ml-4"
-          :class="{ 'opacity-25': form.processing }"
-          :disabled="form.processing"
-        >
-          Register
-        </BreezeButton>
-      </div>
+      <!-- </div> -->
+      <BreezeButton
+        class="w-full justify-center mb-4 mt-6"
+        :class="{ 'opacity-25': form.processing }"
+        :disabled="form.processing"
+      >
+        Register
+      </BreezeButton>
     </form>
+    <Link :href="route('login')" class="underline leading-7 text-base text-gray-600">
+      Already registered?
+    </Link>
   </BreezeGuestLayout>
 </template>

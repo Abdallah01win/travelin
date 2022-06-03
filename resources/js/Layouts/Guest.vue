@@ -1,46 +1,42 @@
 <template>
-  <div
-    class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white"
-  >
-    <div>
-      <!-- <Link href="/">
-                <BreezeApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
-            </Link> -->
-
-      <a
-        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 mr-7"
-        href="/"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-2xl font-marc font-semibold">Travelin</span>
-      </a>
+  <div class="bg-white grid grid-cols-7 h-screen">
+    <div class="flex flex-col justify-center items-center col-span-4">
+      <div class="w-full sm:max-w-md px-6 py-8 shadow-lg">
+        <slot />
+      </div>
     </div>
 
-    <div
-      class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-lg overflow-hidden sm:rounded-lg"
-    >
-      <slot />
+    <div class="relative col-span-3">
+      <img src="/assets/volly-ball.jpg" alt="" class="h-screen w-full" />
+      <div
+        class="absolute bottom-0 left-0 bg-gray-100 bg-opacity-40 px-8 pt-10 pb-8 mx-10 mb-12 text-white backdrop-blur-sm">
+        <blockquote class="text-2xl mb-4">
+          "Ever since our first time, we've been using Travelin to plan every trip. Can't
+          imagine travelling without it."
+        </blockquote>
+        <div class="flex flex-row justify-between text-2xl font-semibold">
+          <div class="flex flex-col ">
+            <h3 class="">Andy Lane</h3>
+            <div class="text-base font-normal">Costarica</div>
+          </div>
+          <div>
+            <span v-for="i in 5" :key="i" class="">{{ '&#9733' }}</span>
+            <div class="flex flex-row gap-3 justify-center mt-1">
+              <span class="border-2 border-white py-0.75 px-1.5 rounded-full">{{ '&#8592' }}</span>
+              <span class="border-2 border-white py-0.75 px-1.5 rounded-full">{{ '&#8594' }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
-<script setup>
-/*export default {
-  components:{
+<script>
+import Navigation from "@/components/Navigation.vue";
+export default {
+  components: {
     Navigation,
-  }
-}*/
-/*import BreezeApplicationLogo from '@/Components/ApplicationLogo.vue';
-import { Link } from "@inertiajs/inertia-vue3";*/
+  },
+};
 </script>
