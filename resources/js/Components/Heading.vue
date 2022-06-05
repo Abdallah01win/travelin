@@ -20,20 +20,10 @@
 <script>
 import Navigation from "@/Components/Navigation.vue";
 import SearchForm from "@/Components/SearchForm.vue";
-let currentUrl = window.location.pathname;
-let home = undefined;
-if (currentUrl === "/") {
-  home = true;
-  console.log(home);
-} else {
-  home = false;
-  console.log(home);
-}
+
 export default {
-  data(home) {
-    return {
-      isHome: home,
-    };
+  data() {
+    return {};
   },
   components: { Navigation, SearchForm },
 };

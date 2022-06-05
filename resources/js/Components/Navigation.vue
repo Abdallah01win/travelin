@@ -41,16 +41,16 @@
         </a>
       </div>
       <div
-        class="text-lg mt-4 md:mt-0"
         v-else
-        :class="[isHome ? 'text-red' : 'text-green']"
+        class="text-lg mt-4 md:mt-0"
+        :class="[{ 'text-white': isHome }, 'text-gray-600']"
       >
         <BreezeDropdown>
           <template #trigger>
             <span class="inline-flex /*rounded-md*/">
               <button
                 type="button"
-                class="inline-flex items-center text-lg leading-4 text-gray-600 bg-transparent hover:text-gray-900 focus:outline-none transition ease-in-out duration-150"
+                class="inline-flex items-center text-lg leading-4 bg-transparent /*hover:text-gray-900*/ focus:outline-none transition ease-in-out duration-150"
               >
                 {{ user.name }}
 
@@ -93,7 +93,7 @@ import { usePage } from "@inertiajs/inertia-vue3";
 import BreezeDropdown from "@/Components/Dropdown.vue";
 import BreezeDropdownLink from "@/Components/DropdownLink.vue";
 let currentUrl = window.location.pathname;
-let home = undefined;
+
 function isHome() {
   if (currentUrl === "/") {
     return true;
