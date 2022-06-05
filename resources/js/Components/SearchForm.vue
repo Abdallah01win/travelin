@@ -16,7 +16,7 @@
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
         <div v-if="errors && errors.destination" class="text-red-600">
-          {{ errors.destination[0] }}
+          {{ errors.destination[0].substr(errors.destination[0].indexOf("field")) }}
         </div>
       </div>
       <div class="flex flex-col">
@@ -31,7 +31,7 @@
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
         <div v-if="errors && errors.departure" class="text-red-600">
-          {{ errors.departure[0] }}
+          {{ errors.departure[0].substr(errors.departure[0].indexOf("field")) }}
         </div>
       </div>
       <div class="flex flex-col">
@@ -46,7 +46,7 @@
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
         <div v-if="errors && errors.returnDate" class="text-red-600">
-          {{ errors.returnDate[0] }}
+          {{ errors.returnDate[0].substr(errors.returnDate[0].indexOf("field")) }}
         </div>
       </div>
       <div class="flex flex-col">
@@ -61,7 +61,7 @@
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
         <div v-if="errors && errors.people" class="text-red-600">
-          {{ errors.people[0] }}
+          {{ errors.people[0].substr(errors.people[0].indexOf("field")) }}
         </div>
       </div>
     </div>
@@ -72,6 +72,7 @@
       Discover
     </button>
     <div v-if="success" class="alert alert-success mt-3">Message sent!</div>
+    <!-- <div v-if="fields" class="alert alert-success mt-3">sent!</div> -->
   </form>
 </template>
 
@@ -97,9 +98,11 @@ export default {
         axios
           .post("/submit", this.fields)
           .then((response) => {
-            this.fields = {}; //Clear input fields.
+            //this.fields = {}; //Clear input fields.
             this.loaded = true;
             this.success = true;
+            //const { fields } = response.data;
+            //window.location.href = "/dashboard";
           })
           .catch((error) => {
             this.loaded = true;
