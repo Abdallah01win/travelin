@@ -99,32 +99,28 @@ import { usePage, InertiaLink } from "@inertiajs/inertia-vue3";
 import BreezeDropdown from "@/Components/Dropdown.vue";
 import BreezeDropdownLink from "@/Components/DropdownLink.vue";
 
-let currentUrl = window.location.pathname;
-function isHome() {
-  if (currentUrl === "/") {
-    console.log(route());
-    return true;
-  } else {
-    console.log(route());
-    return false;
-  }
-}
 export default {
   data() {
     return {
-      ishome: isHome(),
+      ishome: undefined,
     };
   },
   setup() {
     const user = computed(() => usePage().props.value.auth.user);
     return { user };
   },
+  mounted() {
+    const currentUrl = window.location.pathname;
+    function isHome() {
+      if (currentUrl === "/") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    this.ishome = isHome();
+  },
 
-  /*watch: {
-    $route(to, from) {
-      this.isHome = isHome();
-    },
-  },*/
   methods: {},
   components: {
     BreezeDropdown,
