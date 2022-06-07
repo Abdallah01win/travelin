@@ -4,7 +4,7 @@
       class="container px-5 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
     >
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-        <a
+        <Inertia-link
           class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 mb-5"
           href="/"
         >
@@ -21,7 +21,7 @@
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
           <span class="ml-3 text-2xl font-marc font-semibold">Travelin</span>
-        </a>
+        </Inertia-link>
         <p class="mt-2 text-m text-gray-500">
           Packing the best deals for the perfect journy at minimal cost.
         </p>
@@ -35,16 +35,24 @@
           </h2>
           <nav class="list-none mb-4">
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >First Link</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Second Link</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Third Link</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Fourth Link</Inertia-link
+              >
             </li>
           </nav>
         </div>
@@ -54,16 +62,22 @@
           </h2>
           <nav class="list-none mb-4">
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Tours</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800">Tours</Inertia-link>
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Flights</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Flights</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Hotels</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Hotels</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Car Hire</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Car Hire</Inertia-link
+              >
             </li>
           </nav>
         </div>
@@ -73,16 +87,24 @@
           </h2>
           <nav class="list-none mb-4">
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Why us</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Why us</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Our team</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Our team</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Contact us</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Contact us</Inertia-link
+              >
             </li>
             <li class="mb-4">
-              <a class="text-gray-600 hover:text-gray-800">Report issue</a>
+              <Inertia-link class="text-gray-600 hover:text-gray-800"
+                >Report issue</Inertia-link
+              >
             </li>
           </nav>
         </div>
@@ -92,16 +114,16 @@
       <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
         <p class="text-gray-500 text-sm text-center sm:text-left font-medium">
           © 2022 Travelin —
-          <a
+          <Inertia-link
             href="https://twitter.com/knyttneve"
             rel="noopener noreferrer"
             class="text-gray-600 ml-1 font-semibold"
             target="_blank"
-            >@AbdallahBari</a
+            >@AbdallahBari</Inertia-link
           >
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-          <a class="text-gray-700">
+          <Inertia-link class="text-gray-700">
             <svg
               fill="currentColor"
               stroke-linecap="round"
@@ -114,8 +136,8 @@
                 d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
               ></path>
             </svg>
-          </a>
-          <a class="ml-3 text-gray-700">
+          </Inertia-link>
+          <Inertia-link class="ml-3 text-gray-700">
             <svg
               fill="currentColor"
               stroke-linecap="round"
@@ -128,8 +150,8 @@
                 d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
               ></path>
             </svg>
-          </a>
-          <a class="ml-3 text-gray-700">
+          </Inertia-link>
+          <Inertia-link class="ml-3 text-gray-700">
             <svg
               fill="none"
               stroke="currentColor"
@@ -142,8 +164,8 @@
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
             </svg>
-          </a>
-          <a class="ml-3 text-gray-700">
+          </Inertia-link>
+          <Inertia-link class="ml-3 text-gray-700">
             <svg
               fill="currentColor"
               stroke="currentColor"
@@ -159,9 +181,13 @@
               ></path>
               <circle cx="4" cy="4" r="2" stroke="none"></circle>
             </svg>
-          </a>
+          </Inertia-link>
         </span>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup>
+import { InertiaLink } from "@inertiajs/inertia-vue3";
+</script>

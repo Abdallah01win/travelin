@@ -4,7 +4,7 @@ import BreezeGuestLayout from "@/Layouts/Guest.vue";
 import BreezeInput from "@/Components/Input.vue";
 import BreezeLabel from "@/Components/Label.vue";
 import BreezeValidationErrors from "@/Components/ValidationErrors.vue";
-import { Head, Link, useForm } from "@inertiajs/inertia-vue3";
+import { Head, InertiaLink, useForm } from "@inertiajs/inertia-vue3";
 
 const form = useForm({
   name: "",
@@ -91,8 +91,11 @@ const submit = () => {
         Register
       </BreezeButton>
     </form>
-    <Link :href="route('login')" class="underline leading-7 text-base text-gray-600">
+    <Inertia-link
+      :href="route('login')"
+      class="underline leading-7 text-base text-gray-600"
+    >
       Already registered?
-    </Link>
+    </Inertia-link>
   </BreezeGuestLayout>
 </template>
