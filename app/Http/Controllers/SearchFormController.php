@@ -6,7 +6,6 @@ use App\Models\Search;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
-use phpDocumentor\Reflection\Types\Nullable;
 
 class SearchFormController extends Controller
 {
