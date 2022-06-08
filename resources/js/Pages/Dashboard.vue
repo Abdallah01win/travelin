@@ -8,7 +8,7 @@
       <div
         class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
       >
-        <iframe
+        <!-- <iframe
           width="100%"
           height="100%"
           class="absolute inset-0"
@@ -40,7 +40,8 @@
             </h2>
             <p class="leading-relaxed">123-456-7890</p>
           </div>
-        </div>
+        </div>-->
+        <GoogleMap />
       </div>
       <div
         class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-0 mt-8 md:mt-0"
@@ -101,4 +102,5 @@ import { Head } from "@inertiajs/inertia-vue3";
 import Navigation from "@/Components/Navigation.vue";
 import SearchForm from "@/Components/SearchForm.vue";
 import { InertiaLink } from "@inertiajs/inertia-vue3";
+import GoogleMap from "../Components/GoogleMap.vue";
 </script>
