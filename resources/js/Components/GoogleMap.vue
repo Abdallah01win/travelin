@@ -8,11 +8,15 @@ export default {
 };
 </script>
 <template>
-  <GMapMap :center="coordinates" :zoom="12" map-type-id="terrain"></GMapMap>
-  <!-- 
+  <div
+    class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
+  >
+    <GMapMap :center="coordinates" :zoom="12" map-type-id="terrain"></GMapMap>
+    <!-- 
      :defaultCenter="coordinates"
     :options="{}"
     :onChange="{}"
     :onChildClick="{}"
    -->
+  </div>
 </template>

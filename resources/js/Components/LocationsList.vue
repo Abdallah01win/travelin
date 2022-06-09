@@ -2,6 +2,9 @@
 export default {
   data() {
     return {
+      props: {
+        users: Array,
+      },
       type: "resturants",
       ratting: "0",
       locations: [

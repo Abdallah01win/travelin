@@ -4,6 +4,9 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\SearchFormController;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,11 +32,16 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/profile', [UserController::class, 'index'])->middleware(['auth', 'verified'])->name('profile');
+Route::get('/profile', function () {
+    $user = User::get()->where('id' , Auth::id());
+    return Inertia::render('Profile', ['users' => $user]);
+})->middleware(['auth', 'verified'])->name('profile');
 
 Route::post('/submit', [SearchFormController::class, 'submit'])->middleware(['auth', 'verified'])->name('submit');
+Route::post('/userUpdate', [UserController::class, 'update'])->middleware(['auth', 'verified'])->name('userUpdate');
 
 require __DIR__.'/auth.php';
+
 
 
 
