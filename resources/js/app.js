@@ -19,7 +19,7 @@ createInertiaApp({
             .use(ZiggyVue, Ziggy)
             .use(VueGoogleMaps, {
                 load: {
-                    key: 'AIzaSyBZZEaoqZSxm5Kml1dd5vJpCcZ_l_ESTQg',
+                    key: import.meta.env.VUE_APP_GOOGLE_MAP_KEY,
                 }})
             .mount(el);
     },

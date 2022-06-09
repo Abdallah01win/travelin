@@ -41,7 +41,7 @@
             <p class="leading-relaxed">123-456-7890</p>
           </div>
         </div>-->
-        <GoogleMap />
+        <GoogleMap></GoogleMap>
       </div>
       <div
         class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-0 mt-8 md:mt-0"
