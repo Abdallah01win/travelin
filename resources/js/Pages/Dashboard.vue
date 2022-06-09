@@ -43,52 +43,7 @@
         </div>-->
         <GoogleMap></GoogleMap>
       </div>
-      <div
-        class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-0 mt-8 md:mt-0"
-      >
-        <h1 class="text-gray-900 text-lg mb-1 font-medium title-font">
-          Resturants in NewYork
-        </h1>
-        <form class="flex flex-row gap-6 my-2">
-          <select name="type" id="type" class="">
-            <option value="resturants">Resturants</option>
-            <option value="hotels">Hotels</option>
-            <option value="atractions">Atractions</option>
-          </select>
-
-          <select name="ratting" id="ratting" class="">
-            <option value="5">5 Stars</option>
-            <option value="4">4 Stars</option>
-            <option value="3">3 Stars</option>
-            <option value="2">2 Stars</option>
-            <option value="1">1 Star</option>
-          </select>
-        </form>
-
-        <div>
-          <div>
-            <div class="flex flex-row justify-between my-3">
-              <h3>resturant Title</h3>
-              <div>Ratting</div>
-            </div>
-            <div class="border-2 border-gray-900 w-full text-center p-12">some image</div>
-          </div>
-          <div>
-            <div class="flex flex-row justify-between my-3">
-              <h3>resturant Title</h3>
-              <div>Ratting</div>
-            </div>
-            <div class="border-2 border-gray-900 w-full text-center p-12">some image</div>
-          </div>
-          <div>
-            <div class="flex flex-row justify-between my-3">
-              <h3>resturant Title</h3>
-              <div>Ratting</div>
-            </div>
-            <div class="border-2 border-gray-900 w-full text-center p-12">some image</div>
-          </div>
-        </div>
-      </div>
+      <LocationsList />
     </div>
   </section>
 
@@ -103,4 +58,5 @@ import Navigation from "@/Components/Navigation.vue";
 import SearchForm from "@/Components/SearchForm.vue";
 import { InertiaLink } from "@inertiajs/inertia-vue3";
 import GoogleMap from "../Components/GoogleMap.vue";
+import LocationsList from "@/Components/LocationsList.vue";
 </script>
