@@ -39,6 +39,7 @@ Route::get('/profile', function () {
 
 Route::post('/submit', [SearchFormController::class, 'submit'])->middleware(['auth', 'verified'])->name('submit');
 Route::post('/userUpdate', [UserController::class, 'update'])->middleware(['auth', 'verified'])->name('userUpdate');
+Route::get('/userDelete', [UserController::class, 'delete'])->middleware(['auth', 'verified'])->name('userDelete');
 
 require __DIR__.'/auth.php';
 
