@@ -2,11 +2,11 @@
   <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
-        <h1
-          class="sm:leading-snug sm:text-5xl /*text-5xl*/ font-medium mb-4 text-gray-900 font-marc mx-52"
+        <h2
+          class="sm:leading-snug sm:text-5xl font-medium mb-4 text-gray-900 font-marc mx-52"
         >
           Prepare yourself and let's explore the beauty of the world
-        </h1>
+        </h2>
         <p class="lg:w-2/3 mx-auto leading-relaxed text-xl">
           Join our news letter and get 20% off.
         </p>
