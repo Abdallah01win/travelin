@@ -35,7 +35,7 @@
           />
         </div>
         <button
-          class="flex-grow w-full text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-xl"
+          class="flex-grow w-full text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded-xl text-xl"
         >
           Join Now
         </button>

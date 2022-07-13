@@ -1,7 +1,10 @@
 <template>
   <header class="text-gray-600 bg-transparent absolute w-full">
     <div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 mr-7">
+      <a
+        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 mr-7"
+        href="/"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -19,9 +22,9 @@
       <nav
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 flex flex-wrap items-center text-base justify-center"
       >
-        <a class="mr-8 text-lg hover:text-gray-900">Home</a>
-        <a class="mr-8 text-lg hover:text-gray-900">Destination</a>
-        <a class="mr-8 text-lg hover:text-gray-900">About us</a>
+        <a class="mr-8 text-lg hover:text-gray-900" href="/">Home</a>
+        <a class="mr-8 text-lg hover:text-gray-900" href="">Destination</a>
+        <a class="mr-8 text-lg hover:text-gray-900" href="">About us</a>
       </nav>
       <a
         href="login"

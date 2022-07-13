@@ -1,11 +1,12 @@
 <template>
-  <footer class="text-gray-600 body-font">
+  <footer class="text-gray-600 body-font bg-gray-100">
     <div
-      class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      class="container px-5 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
     >
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
         <a
-          class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+          class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 mb-5"
+          href="/"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -21,86 +22,86 @@
           </svg>
           <span class="ml-3 text-2xl font-marc font-semibold">Travelin</span>
         </a>
-        <p class="mt-2 text-sm text-gray-500">
-          Air plant banjo lyft occupy retro adaptogen indego
+        <p class="mt-2 text-m text-gray-500">
+          Packing the best deals for the perfect journy at minimal cost.
         </p>
       </div>
       <div
         class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
       >
         <div class="lg:w-1/3 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-lg mb-4">
             CATEGORIES
           </h2>
-          <nav class="list-none mb-10">
-            <li>
+          <nav class="list-none mb-4">
+            <li class="mb-4">
               <a class="text-gray-600 hover:text-gray-800">First Link</a>
             </li>
-            <li>
+            <li class="mb-4">
               <a class="text-gray-600 hover:text-gray-800">Second Link</a>
             </li>
-            <li>
+            <li class="mb-4">
               <a class="text-gray-600 hover:text-gray-800">Third Link</a>
             </li>
-            <li>
+            <li class="mb-4">
               <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
             </li>
           </nav>
         </div>
         <div class="lg:w-1/3 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-            CATEGORIES
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-lg mb-4">
+            SERVICES
           </h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          <nav class="list-none mb-4">
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Tours</a>
             </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Flights</a>
             </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Hotels</a>
             </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Car Hire</a>
             </li>
           </nav>
         </div>
         <div class="lg:w-1/3 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-            CATEGORIES
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-lg mb-4">
+            ABOUT
           </h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          <nav class="list-none mb-4">
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Why us</a>
             </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Our team</a>
             </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Contact us</a>
             </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <li class="mb-4">
+              <a class="text-gray-600 hover:text-gray-800">Report issue</a>
             </li>
           </nav>
         </div>
       </div>
     </div>
-    <div class="bg-gray-100">
+    <div class="">
       <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-        <p class="text-gray-500 text-sm text-center sm:text-left">
+        <p class="text-gray-500 text-sm text-center sm:text-left font-medium">
           © 2022 Travelin —
           <a
             href="https://twitter.com/knyttneve"
             rel="noopener noreferrer"
-            class="text-gray-600 ml-1"
+            class="text-gray-600 ml-1 font-semibold"
             target="_blank"
             >@AbdallahBari</a
           >
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-          <a class="text-gray-500">
+          <a class="text-gray-700">
             <svg
               fill="currentColor"
               stroke-linecap="round"
@@ -114,7 +115,7 @@
               ></path>
             </svg>
           </a>
-          <a class="ml-3 text-gray-500">
+          <a class="ml-3 text-gray-700">
             <svg
               fill="currentColor"
               stroke-linecap="round"
@@ -128,7 +129,7 @@
               ></path>
             </svg>
           </a>
-          <a class="ml-3 text-gray-500">
+          <a class="ml-3 text-gray-700">
             <svg
               fill="none"
               stroke="currentColor"
@@ -142,7 +143,7 @@
               <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
             </svg>
           </a>
-          <a class="ml-3 text-gray-500">
+          <a class="ml-3 text-gray-700">
             <svg
               fill="currentColor"
               stroke="currentColor"
