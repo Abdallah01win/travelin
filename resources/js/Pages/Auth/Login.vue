@@ -35,6 +35,11 @@ const submit = () => {
       {{ status }}
     </div>
 
+    <div class="text-3xl text-gray-900 font-marc my-3 font-semibold">Welcome Back!</div>
+    <p class="text-base text-gray-600 mb-5">
+      Nice to see you again. Please enter your details.
+    </p>
+
     <form @submit.prevent="submit">
       <div>
         <BreezeLabel for="email" value="Email" />
@@ -61,14 +66,14 @@ const submit = () => {
         />
       </div>
 
-      <div class="block mt-4">
-        <label class="flex items-center">
-          <BreezeCheckbox name="remember" v-model:checked="form.remember" />
-          <span class="ml-2 text-gray-600 leading-7 text-base">Remember me</span>
-        </label>
-      </div>
+      <div class="flex items-center justify-between align-center mt-2 py-4">
+        <div class="">
+          <label class="flex items-center">
+            <BreezeCheckbox name="remember" v-model:checked="form.remember" />
+            <span class="ml-2 text-gray-600 leading-7 text-base">Remember me</span>
+          </label>
+        </div>
 
-      <div class="flex items-center justify-between mt-6">
         <Link
           v-if="canResetPassword"
           :href="route('password.request')"
@@ -76,15 +81,17 @@ const submit = () => {
         >
           Forgot your password?
         </Link>
-
-        <BreezeButton
-          class=""
-          :class="{ 'opacity-25': form.processing }"
-          :disabled="form.processing"
-        >
-          Log in
-        </BreezeButton>
       </div>
+      <BreezeButton
+        class="w-full justify-center mb-4"
+        :class="{ 'opacity-25': form.processing }"
+        :disabled="form.processing"
+      >
+        Log in
+      </BreezeButton>
     </form>
+    <Link href="register" class="leading-7 text-base text-gray-600 pt-10">
+      Don't have an account?
+    </Link>
   </BreezeGuestLayout>
 </template>
