@@ -1,6 +1,8 @@
 <template>
   <header class="text-gray-600 w-full">
-    <div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
+    <div
+      class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center px-6"
+    >
       <a
         class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 mr-7"
         href="/"
@@ -39,13 +41,47 @@
         </a>
       </div>
       <div
-        class="text-lg mt-4 md:mt-0 mr-10"
+        class="text-lg mt-4 md:mt-0"
         v-else
         :class="[isHome ? 'text-red' : 'text-green']"
       >
-        <a href="/profile">
-          {{ user.name }}
-        </a>
+        <BreezeDropdown>
+          <template #trigger>
+            <span class="inline-flex /*rounded-md*/">
+              <button
+                type="button"
+                class="inline-flex items-center text-lg leading-4 text-gray-600 bg-transparent hover:text-gray-900 focus:outline-none transition ease-in-out duration-150"
+              >
+                {{ user.name }}
+
+                <svg
+                  class="ml-2 -mr-0.5 h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </span>
+          </template>
+
+          <template #content>
+            <BreezeDropdownLink href="/profile" method="get" as="button">
+              Profile
+            </BreezeDropdownLink>
+            <BreezeDropdownLink href="/dashboard" method="get" as="button">
+              Dashboard
+            </BreezeDropdownLink>
+            <BreezeDropdownLink :href="route('logout')" method="post" as="button">
+              Log Out
+            </BreezeDropdownLink>
+          </template>
+        </BreezeDropdown>
       </div>
     </div>
   </header>
@@ -54,6 +90,8 @@
 <script>
 import { computed } from "@vue/reactivity";
 import { usePage } from "@inertiajs/inertia-vue3";
+import BreezeDropdown from "@/Components/Dropdown.vue";
+import BreezeDropdownLink from "@/Components/DropdownLink.vue";
 let currentUrl = window.location.pathname;
 let home = undefined;
 function isHome() {
@@ -73,6 +111,10 @@ export default {
   setup() {
     const user = computed(() => usePage().props.value.auth.user);
     return { user };
+  },
+  components: {
+    BreezeDropdown,
+    BreezeDropdownLink,
   },
 };
 </script>
