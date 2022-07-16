@@ -1,55 +1,68 @@
 <template>
   <form
     class="flex flex-row shadow-xl rounded-3xl overflow-hidden"
-    action="search"
-    method="POST"
+    @submit.prevent="submit"
   >
-    @csrf
     <div class="flex flex-row min-w-fit p-6 bg-white gap-7">
       <div class="flex flex-col">
         <label for="destination" class="leading-7 text-base text-gray-600 mb-2">
           Chose Your Destination
         </label>
         <input
+          v-model="fields.destination"
           type="text"
           id="destination"
           name="destination"
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
+        <div v-if="errors && errors.destination" class="text-red-600">
+          {{ errors.destination[0] }}
+        </div>
       </div>
       <div class="flex flex-col">
         <label for="departure" class="leading-7 text-base text-gray-600 mb-2"
           >Departure Date</label
         >
         <input
+          v-model="fields.departure"
           type="date"
           id="date"
           name="departure"
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
+        <div v-if="errors && errors.departure" class="text-red-600">
+          {{ errors.departure[0] }}
+        </div>
       </div>
       <div class="flex flex-col">
         <label for="return" class="leading-7 text-base text-gray-600 mb-2"
           >Return Date</label
         >
         <input
+          v-model="fields.returnDate"
           type="date"
           id="date"
-          name="return"
+          name="returnDate"
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
+        <div v-if="errors && errors.returnDate" class="text-red-600">
+          {{ errors.returnDate[0] }}
+        </div>
       </div>
       <div class="flex flex-col">
         <label for="people" class="leading-7 text-base text-gray-600 mb-2">People</label>
         <input
+          v-model="fields.people"
           type="number"
-          value="1"
           min="1"
           max="10"
           id="people"
           name="people"
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
+        <div v-if="errors && errors.people" class="text-red-600">
+          {{ errors.people[0] }}
+        </div>
       </div>
     </div>
     <button
@@ -58,5 +71,44 @@
     >
       Discover
     </button>
+    <div v-if="success" class="alert alert-success mt-3">Message sent!</div>
   </form>
 </template>
+
+<script>
+import axios from "axios";
+/**/
+export default {
+  data() {
+    return {
+      fields: {},
+      errors: {},
+      success: false,
+      loaded: true,
+    };
+  },
+
+  methods: {
+    submit() {
+      if (this.loaded) {
+        this.loaded = false;
+        this.success = false;
+        this.errors = {};
+        axios
+          .post("/submit", this.fields)
+          .then((response) => {
+            this.fields = {}; //Clear input fields.
+            this.loaded = true;
+            this.success = true;
+          })
+          .catch((error) => {
+            this.loaded = true;
+            if (error.response.status === 422) {
+              this.errors = error.response.data.errors || {};
+            }
+          });
+      }
+    },
+  },
+};
+</script>

@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\SearchFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,10 @@ Route::get('/profile', function () {
     return Inertia::render('Profile');
 })->middleware(['auth', 'verified'])->name('profile');
 
+Route::post('/submit', [SearchFormController::class, 'submit'])->name('submit');
+
 require __DIR__.'/auth.php';
+
+
+
+?>
