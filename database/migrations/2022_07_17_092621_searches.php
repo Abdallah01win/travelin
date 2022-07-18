@@ -15,8 +15,14 @@ return new class extends Migration
     {
         Schema::create('searches', function (Blueprint $table) {
             $table->id();
-            $table->string('destination');
-            $table->string('departure');
+            $table->integer('userId');
+            $table->text('departureLocation');
+            $table->text('destination');
+            $table->integer('departureCount');
+            $table->integer('destinationCount');
+            $table->string('departureDate');
+            $table->string('returnDate');
+            $table->integer('people');
             $table->timestamps();
         });
     }
