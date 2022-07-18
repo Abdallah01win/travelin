@@ -71,8 +71,9 @@
     >
       Discover
     </button>
-    <div v-if="success" class="alert alert-success mt-3">Message sent!</div>
-    <!-- <div v-if="fields" class="alert alert-success mt-3">sent!</div> -->
+
+    <!-- <div v-if="success" class="alert alert-success mt-3">Message sent!</div> -->
+    <div v-if="hasMany" class="alert alert-success mt-3">Many cities found</div>
   </form>
 </template>
 
@@ -86,6 +87,7 @@ export default {
       errors: {},
       success: false,
       loaded: true,
+      hasMany: undefined,
     };
   },
 
@@ -101,6 +103,7 @@ export default {
             //this.fields = {}; //Clear input fields.
             this.loaded = true;
             this.success = true;
+            this.hasMany = response.hasMany;
             //const { fields } = response.data;
             //window.location.href = "/dashboard";
           })
