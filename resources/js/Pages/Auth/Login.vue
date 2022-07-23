@@ -5,7 +5,7 @@ import BreezeGuestLayout from "@/Layouts/Guest.vue";
 import BreezeInput from "@/Components/Input.vue";
 import BreezeLabel from "@/Components/Label.vue";
 import BreezeValidationErrors from "@/Components/ValidationErrors.vue";
-import { Head, Link, useForm } from "@inertiajs/inertia-vue3";
+import { Head, useForm, InertiaLink } from "@inertiajs/inertia-vue3";
 
 defineProps({
   canResetPassword: Boolean,
@@ -74,13 +74,13 @@ const submit = () => {
           </label>
         </div>
 
-        <Link
+        <Inertia-link
           v-if="canResetPassword"
           :href="route('password.request')"
           class="underline leading-7 text-base text-gray-600"
         >
           Forgot your password?
-        </Link>
+        </Inertia-link>
       </div>
       <BreezeButton
         class="w-full justify-center mb-4"
@@ -90,8 +90,8 @@ const submit = () => {
         Log in
       </BreezeButton>
     </form>
-    <Link href="register" class="leading-7 text-base text-gray-600 pt-10">
+    <Inertia-link href="register" class="leading-7 text-base text-gray-600 pt-10">
       Don't have an account?
-    </Link>
+    </Inertia-link>
   </BreezeGuestLayout>
 </template>

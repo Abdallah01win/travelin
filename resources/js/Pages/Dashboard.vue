@@ -3,12 +3,7 @@ import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
 import { Head } from "@inertiajs/inertia-vue3";
 import Navigation from "@/Components/Navigation.vue";
 import SearchForm from "@/Components/SearchForm.vue";
-
-/*export default {
-  components: {
-    Navigation,
-  },
-};*/
+//import FlightsDisplay from "@/Components/FlightsDisplay.vue";
 </script>
 
 <template>
@@ -16,6 +11,7 @@ import SearchForm from "@/Components/SearchForm.vue";
   <div class="container mx-auto">
     <Navigation class="mb-6 shadow-lg" />
     <SearchForm class="w-fit mx-auto" />
+    <!-- <FlightsDisplay /> -->
   </div>
 
   <!-- <BreezeAuthenticatedLayout>
