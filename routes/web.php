@@ -29,11 +29,9 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/profile', function () {
-    return Inertia::render('Profile');
-})->middleware(['auth', 'verified'])->name('profile');
+Route::get('/profile', [UserController::class, 'index'])->middleware(['auth', 'verified'])->name('profile');
 
-Route::post('/submit', [SearchFormController::class, 'submit'])->name('submit');
+Route::post('/submit', [SearchFormController::class, 'submit'])->middleware(['auth', 'verified'])->name('submit');
 
 require __DIR__.'/auth.php';
 

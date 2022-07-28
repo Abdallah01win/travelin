@@ -9,7 +9,7 @@
         There are endless possiblities when planning your vecaton, so we're waiting for
         you to use travelin.
       </p>
-      <SearchForm class="absolute left-0 bottom-32" />
+      <SearchForm class="absolute left-0 bottom-32 shadow-xl" />
     </div>
     <div class="">
       <img src="/assets/hero-beach.jpg" alt="" class="h-screen w-full" />

@@ -1,28 +1,6 @@
 <template>
-  <form
-    class="flex flex-row shadow-xl rounded-3xl overflow-hidden"
-    @submit.prevent="submit"
-  >
+  <form class="flex flex-row rounded-3xl overflow-hidden" @submit.prevent="submit">
     <div class="flex flex-row min-w-fit p-6 bg-white gap-7">
-      <div class="flex flex-col">
-        <label for="departureLocation" class="leading-7 text-base text-gray-600 mb-2">
-          Departure
-        </label>
-        <input
-          v-model="fields.departureLocation"
-          type="text"
-          id="departureLocation"
-          name="departureLocation"
-          class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-        />
-        <div v-if="errors && errors.departureLocation" class="text-red-600">
-          {{
-            errors.departureLocation[0].substr(
-              errors.departureLocation[0].indexOf("field")
-            )
-          }}
-        </div>
-      </div>
       <div class="flex flex-col">
         <label for="destination" class="leading-7 text-base text-gray-600 mb-2">
           Chose Your Destination

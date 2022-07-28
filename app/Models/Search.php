@@ -10,7 +10,6 @@ class Search extends Model
     use HasFactory;
     protected $fillable = [
         'userId',
-        'departureLocation',
         'destination',
         'departureCount',
         'destinationCount',
