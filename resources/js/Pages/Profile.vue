@@ -1,21 +1,23 @@
 <template>
   <Navigation />
-  <div class="container mx-auto mt-10">
-    <BreezeValidationErrors class="mb-4" />
-    <div class="flex flex-col gap-4 items-center">
-      <!-- <img src="" alt="" /> -->
-      <div
-        class="py-10 px-12 border-2 border-gray-600 rounded-full text-5xl text-gray-900 font-semibold"
-      >
-        {{ users[0].name[0] }}
+  <div class="container mx-auto">
+    <div class="w-2/4 mx-auto relative pb-10">
+      <BreezeValidationErrors class="mb-4" />
+      <div class="flex flex-col gap-4 items-center">
+        <!-- <img src="" alt="" /> -->
+        <div
+          class="py-10 px-12 border-2 border-gray-600 rounded-full text-5xl text-gray-900 font-semibold"
+        >
+          {{ users[0].name[0] }}
+        </div>
+        <div class="text-gray-600">Joined on {{ users[0].created_at }}</div>
       </div>
-      <div class="text-gray-600">Joined on {{ users[0].created_at }}</div>
-    </div>
-    <div
-      v-if="success"
-      class="alert alert-success mt-6 bg-green-300 py-2 px-4 w-fit mx-auto rounded"
-    >
-      Info Updated Successfully!
+      <div
+        v-if="success"
+        class="absolute bottom-[-5%] left-1/2 translate-x-[-50%] bg-green-300 py-2 px-4 w-fit //mx-auto rounded"
+      >
+        Info Updated Successfully!
+      </div>
     </div>
     <form action="" class="w-2/4 mx-auto" @submit.prevent="updateInfo">
       <div>
@@ -57,11 +59,27 @@
           {{ errors.adress[0] }}
         </div>
       </div>
-      <div class="flex flex-row justify-between mt-6">
-        <BreezeButton class="bg-red-500 hover:bg-red-700" type="submit"
-          >Delete My Account</BreezeButton
+      <div class="mt-4 relative">
+        <BreezeLabel for="password" value="Password" />
+        <BreezeInput
+          class="mt-1 block w-full"
+          id="password"
+          type="password"
+          placeholder="Change Password"
+          v-model="fields.password"
         >
-        <BreezeButton>Update</BreezeButton>
+        </BreezeInput>
+        <div v-if="errors && errors.password" class="text-red-600 mt-2">
+          {{ errors.password[0] }}
+        </div>
+      </div>
+      <div class="flex flex-row justify-between items-center mt-6">
+        <a
+          v-on:click="showPopup()"
+          class="text-white text-base hover:bg-red-700 bg-red-600 py-2 px-6 rounded-xl font-medium cursor-pointer"
+          >Delete My Account</a
+        >
+        <BreezeButton class="text-base">Update</BreezeButton>
       </div>
     </form>
   </div>
@@ -92,6 +110,7 @@ export default {
     BreezeInput,
     BreezeLabel,
     BreezeValidationErrors,
+    InertiaLink,
   },
   methods: {
     updateInfo() {
@@ -106,14 +125,26 @@ export default {
             this.loaded = true;
             this.success = true;
             Inertia.reload({ only: ["users"] });
+            Inertia.reload(computed(() => usePage()));
+            setTimeout(() => {
+              this.success = false;
+            }, 3000)();
           })
           .catch((error) => {
             this.loaded = true;
-            if (error.response.status === 422) {
-              this.errors = error.response.data.errors || {};
+            try {
+              if (error.response.status === 422) {
+                this.errors = error.response.data.errors || {};
+              }
+            } catch (error) {
+              console.log(error);
             }
           });
       }
+    },
+
+    showPopup: function () {
+      console.log("clicked");
     },
   },
 };

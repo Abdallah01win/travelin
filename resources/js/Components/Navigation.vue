@@ -94,6 +94,7 @@
 </template>
 
 <script>
+import { Inertia } from "@inertiajs/inertia";
 import { computed } from "@vue/reactivity";
 import { usePage, InertiaLink } from "@inertiajs/inertia-vue3";
 import BreezeDropdown from "@/Components/Dropdown.vue";
