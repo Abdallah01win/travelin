@@ -84,7 +84,12 @@
     </form>
   </div>
   <div class="fixed top-0 left-0 h-full w-full z-10 bg-black bg-opacity-80" v-if="delete">
-    <DeleteAlert @bol="getBol" />
+    <Alert
+      @bol="getBol"
+      title="Delete Your Account?"
+      message="Are you sure you want to perminantly delete your account? This will delete any data assosiated with this account including any uploads or saves you made."
+      action="Delete"
+    />
   </div>
 </template>
 
@@ -97,7 +102,7 @@ import BreezeButton from "@/Components/Button.vue";
 import BreezeInput from "@/Components/Input.vue";
 import BreezeLabel from "@/Components/Label.vue";
 import BreezeValidationErrors from "@/Components/ValidationErrors.vue";
-import DeleteAlert from "../Components/DeleteAlert.vue";
+import Alert from "../Components/Alert.vue";
 export default {
   data() {
     return {
@@ -116,7 +121,7 @@ export default {
     BreezeLabel,
     BreezeValidationErrors,
     InertiaLink,
-    DeleteAlert,
+    Alert,
   },
   methods: {
     updateInfo() {
