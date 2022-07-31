@@ -83,6 +83,9 @@
       </div>
     </form>
   </div>
+  <div class="fixed top-0 left-0 h-full w-full z-10 bg-black bg-opacity-80" v-if="delete">
+    <DeleteAlert @bol="getBol" />
+  </div>
 </template>
 
 <script>
@@ -94,6 +97,7 @@ import BreezeButton from "@/Components/Button.vue";
 import BreezeInput from "@/Components/Input.vue";
 import BreezeLabel from "@/Components/Label.vue";
 import BreezeValidationErrors from "@/Components/ValidationErrors.vue";
+import DeleteAlert from "../Components/DeleteAlert.vue";
 export default {
   data() {
     return {
@@ -101,6 +105,7 @@ export default {
       errors: {},
       success: false,
       loaded: true,
+      delete: false,
     };
   },
   props: { users: Array },
@@ -111,6 +116,7 @@ export default {
     BreezeLabel,
     BreezeValidationErrors,
     InertiaLink,
+    DeleteAlert,
   },
   methods: {
     updateInfo() {
@@ -144,7 +150,10 @@ export default {
     },
 
     showPopup: function () {
-      console.log("clicked");
+      this.delete = !this.delete;
+    },
+    getBol: function (value) {
+      this.delete = value;
     },
   },
 };
