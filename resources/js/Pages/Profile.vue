@@ -1,25 +1,35 @@
 <template>
   <Navigation />
   <div class="container mx-auto">
-    <div class="w-2/4 mx-auto relative pb-10">
-      <BreezeValidationErrors class="mb-4" />
-      <div class="flex flex-col gap-4 items-center">
-        <!-- <img src="" alt="" /> -->
-        <div
-          class="py-10 px-12 border-2 border-gray-600 rounded-full text-5xl text-gray-900 font-semibold"
-        >
-          {{ users[0].name[0] }}
-        </div>
-        <div class="text-gray-600">Joined on {{ users[0].created_at }}</div>
-      </div>
-      <div
-        v-if="success"
-        class="absolute bottom-[-5%] left-1/2 translate-x-[-50%] bg-green-300 py-2 px-4 w-fit //mx-auto rounded"
-      >
-        Info Updated Successfully!
-      </div>
-    </div>
     <form action="" class="w-2/4 mx-auto" @submit.prevent="updateInfo">
+      <div class="w-2/4 mx-auto relative pb-10">
+        <BreezeValidationErrors class="mb-4" />
+        <div class="flex flex-col gap-4 items-center">
+          <!-- <img src="" alt="" /> -->
+          <div
+            class="py-10 px-12 border-2 border-gray-600 rounded-full text-5xl text-gray-900 font-semibold"
+          >
+            {{ users[0].name[0] }}
+          </div>
+          <BreezeInput
+            id="image"
+            type="file"
+            class="mt-1 block w-full"
+            @input="form.image = $event.target.files[0]"
+            autofocus
+          />
+          <progress v-if="form.progress" :value="form.progress.percentage" max="100">
+            {{ form.progress.percentage }}%
+          </progress>
+          <div class="text-gray-600">Joined on {{ users[0].created_at }}</div>
+        </div>
+        <div
+          v-if="success"
+          class="absolute bottom-[-5%] left-1/2 translate-x-[-50%] bg-green-300 py-2 px-4 w-fit //mx-auto rounded"
+        >
+          Info Updated Successfully!
+        </div>
+      </div>
       <div>
         <BreezeLabel for="name" value="Name" />
         <BreezeInput
@@ -97,7 +107,7 @@
 import { Inertia } from "@inertiajs/inertia";
 import Navigation from "@/Components/Navigation.vue";
 import { computed } from "@vue/reactivity";
-import { usePage, InertiaLink } from "@inertiajs/inertia-vue3";
+import { useForm, usePage, InertiaLink } from "@inertiajs/inertia-vue3";
 import BreezeButton from "@/Components/Button.vue";
 import BreezeInput from "@/Components/Input.vue";
 import BreezeLabel from "@/Components/Label.vue";
@@ -114,6 +124,12 @@ export default {
     };
   },
   props: { users: Array },
+  setup() {
+    const form = useForm({
+      image: null,
+    });
+    return { form };
+  },
   components: {
     Navigation,
     BreezeButton,
