@@ -10,6 +10,7 @@
           type="text"
           id="destination"
           name="destination"
+          placeholder=" Agadir, Morocco"
           class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
         <div v-if="errors && errors.destination" class="text-red-600">
@@ -33,15 +34,17 @@
       </div>
       <div class="flex flex-col">
         <label for="people" class="leading-7 text-base text-gray-600 mb-2">People</label>
-        <input
-          v-model="fields.people"
-          type="number"
-          min="1"
-          max="10"
-          id="people"
-          name="people"
-          class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-        />
+        <select 
+        v-model="fields.people"
+        name="people" id="people"
+        class="bg-gray-100 w-28 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+        >
+      <option value="1">1</option>
+      <option value="1">2</option>
+      <option value="1">3</option>
+      <option value="1">4</option>
+      <option value="1">5</option>
+    </select>
         <div v-if="errors && errors.people" class="text-red-600">
           {{ errors.people[0].substr(errors.people[0].indexOf("field")) }}
         </div>
