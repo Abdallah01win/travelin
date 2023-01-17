@@ -1,3 +1,4 @@
+
 <template>
   <footer class="text-gray-600 body-font bg-gray-100">
     <div
@@ -20,7 +21,7 @@
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span class="ml-3 text-2xl font-marc font-semibold">Travelin</span>
+          <span class="ml-3 text-2xl font-marc font-semibold">Voyager</span>
         </Inertia-link>
         <p class="mt-2 text-m text-gray-500">
           Packing the best deals for the perfect journy at minimal cost.
@@ -113,7 +114,7 @@
     <div class="">
       <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
         <p class="text-gray-500 text-sm text-center sm:text-left font-medium">
-          © 2022 Travelin —
+          © 2022 Voyager —
           <Inertia-link
             href="https://twitter.com/knyttneve"
             rel="noopener noreferrer"
@@ -188,6 +189,4 @@
   </footer>
 </template>
 
-<script setup>
-import { InertiaLink } from "@inertiajs/inertia-vue3";
-</script>
+

@@ -27,7 +27,7 @@ const submit = () => {
 
     <BreezeValidationErrors class="mb-4" />
     <div class="text-3xl text-gray-900 font-marc my-3 font-semibold">
-      Welcome To Travelin
+      Welcome To Voyager
     </div>
     <p class="text-base text-gray-600 mb-5">Please enter your details.</p>
     <form @submit.prevent="submit">

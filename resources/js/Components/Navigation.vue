@@ -19,7 +19,7 @@
         >
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
-        <span class="ml-3 text-2xl font-marc font-semibold">Travelin</span>
+        <span class="ml-3 text-2xl font-marc font-semibold">Voyager</span>
       </Inertia-link>
       <nav
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 flex flex-wrap items-center text-base justify-center"
