@@ -3,11 +3,11 @@
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h2
-          class="sm:leading-snug sm:text-5xl font-medium mb-4 text-gray-900 font-marc mx-52"
+          class="sm:leading-snug sm:text-3xl font-medium mb-4 text-gray-900 font-marc mx-52"
         >
-          Prepare yourself and let's explore the beauty of the world
+        Get ready and discover the world's wonders with us
         </h2>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-xl">
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-lg">
           Join our news letter and get 20% off.
         </p>
       </div>
