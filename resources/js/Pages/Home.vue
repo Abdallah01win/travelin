@@ -4,6 +4,7 @@
   <Partners />
   <StatsSection />
   <Destinations />
+  <Testamonials />
   <NewsLetter />
   <Footer />
 
@@ -15,6 +16,7 @@ import { Head } from "@inertiajs/inertia-vue3";
 import Partners from "@/Components/Partners.vue";
 import Heading from "@/Components/Heading.vue";
 import Destinations from "@/Components/Destinations.vue";
+import Testamonials from "@/Components/Testamonials.vue";
 import NewsLetter from "@/Components/NewsLetter.vue";
 import Footer from "@/Components/Footer.vue";
 import StatsSection from "@/Components/StatsSection.vue";
@@ -27,6 +29,7 @@ export default {
     NewsLetter,
     Heading,
     StatsSection,
+    Testamonials,
   },
 };
 </script>
