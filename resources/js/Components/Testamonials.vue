@@ -12,414 +12,60 @@ export default {
 };
 </script>
 <template>
-    <section
-        class="py-12 px-4 max-w-[1120px] mx-auto bg-gray-200 rounded-2xl">
+    <section class="py-12 px-4 max-w-[1120px] mx-auto bg-gray-200 rounded-2xl">
         <h3 class="font-marc text-4xl capitalize text-gray-900 text-center">
             What Do They Say?
         </h3>
         <div>
             <Splide
+            ref="splide"
                 :options="{
                     type: 'loop',
                     perPage: 3,
                     focus: 'center',
-                    gap: '2rem',
-                    pagination: false,   
+                    gap: '2.3rem',
+                    pagination: false,
                 }"
                 aria-label="testamonials"
             >
                 <SplideSlide>
-                    <div
-                        class="bg-white drop-shadow-xl rounded-lg p-3 /max-w-[250] my-8"
-                    >
-                        <img
-                            src="/assets/norway.jpg"
-                            alt=""
-                            class="rounded-lg min-w-full h-[250px]"
-                        />
-                        <div class="font-semibold mb-2 mt-3 text-gray-900">
-                            The Blue Mountain
-                        </div>
-                        <p class="text-sm mb-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consectetur, at.
-                        </p>
-                        <div
-                            class="flex items-center justify-between text-sm text-gray-900"
+                    <div class="bg-white p-8 rounded-xl bg-opacity-50 mt-8">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            class="block w-5 h-5 text-gray-900 mb-4"
+                            viewBox="0 0 975.036 975.036"
                         >
-                            <div class="flex items-center gap-x-1">
-                                <span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        fill="#16a34b"
-                                        viewBox="0 0 256 256"
-                                    >
-                                        <rect
-                                            width="256"
-                                            height="256"
-                                            fill="none"
-                                        ></rect>
-                                        <line
-                                            x1="56"
-                                            y1="232"
-                                            x2="200"
-                                            y2="232"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></line>
-                                        <circle
-                                            cx="128"
-                                            cy="104"
-                                            r="32"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></circle>
-                                        <path
-                                            d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ipisa, Italy</span
+                            <path
+                                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                            ></path>
+                        </svg>
+                        <p class="leading-relaxed mb-6 text-gray-600 text-sm capitalize">
+                            Synth chartreuse iPhone lomo cray raw denim brunch
+                            everyday carry neutra before they sold out fixie
+                            90's microdosing. Tacos pinterest fanny pack venmo,
+                            post-ironic heirloom try-hard pabst authentic
+                            iceland.
+                        </p>
+                        <a class="inline-flex items-center">
+                            <img
+                                alt="testimonial"
+                                src="https://dummyimage.com/106x106"
+                                class="w-10 h-10 rounded-full flex-shrink-0 object-cover object-center"
+                            />
+                            <span
+                                class="flex-grow flex flex-col pl-4"
+                            >
+                                <span class="title-font font-medium text-sm text-gray-900"
+                                    >Holden Caulfield</span
                                 >
-                            </div>
-
-                            <div class="flex items-center gap-x-1">
-                                <span class="flex items-center gap-x-1">
-                                    <span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="22"
-                                            fill="#16a34b"
-                                            viewBox="0 0 256 256"
-                                        >
-                                            <rect
-                                                width="256"
-                                                height="256"
-                                                fill="none"
-                                            ></rect>
-                                            <path
-                                                d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59-3.8a.5.5,0,0,1-.4-.3l-22-55.5a16.3,16.3,0,0,0-30.4,0l-22,55.5a.5.5,0,0,1-.4.3L31.4,86A16.4,16.4,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.2,37.6a.8.8,0,0,1,.2.8L53.9,207a18.6,18.6,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.8,16.8,0,0,0,9.5-3.1,16.6,16.6,0,0,0,6.3-17.7l-14.5-57.3a.8.8,0,0,1,.2-.8L234,115.5A16.8,16.8,0,0,0,239.2,97.4Zm-15.4,5.8-45.3,37.6a16.8,16.8,0,0,0-5.4,17l14.5,57.3c.1.4.1.5,0,.6a.7.7,0,0,1-.3.3h-.2L136.7,184a16,16,0,0,0-8.7-2.5V32c.1,0,.2,0,.3.3l22.1,55.5a16.4,16.4,0,0,0,14.1,10.4l59.1,3.8c.1,0,.2,0,.3.4S223.9,103.1,223.8,103.2Z"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                    <span class="font-semibold text-xs"
-                                        >4.5</span
-                                    >
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ratting</span
-                                >
-                            </div>
-                        </div>
+                                <span class="text-xs ">WEB DEVELOPER</span>
+                            </span>
+                        </a>
                     </div>
                 </SplideSlide>
-                <SplideSlide>
-                    <div
-                        class="bg-white drop-shadow-xl rounded-lg p-3 /max-w-[250] my-8"
-                    >
-                        <img
-                            src="/assets/norway.jpg"
-                            alt=""
-                            class="rounded-lg min-w-full h-[250px]"
-                        />
-                        <div class="font-semibold mb-2 mt-3 text-gray-900">
-                            The Blue Mountain
-                        </div>
-                        <p class="text-sm mb-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consectetur, at.
-                        </p>
-                        <div
-                            class="flex items-center justify-between text-sm text-gray-900"
-                        >
-                            <div class="flex items-center gap-x-1">
-                                <span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        fill="#16a34b"
-                                        viewBox="0 0 256 256"
-                                    >
-                                        <rect
-                                            width="256"
-                                            height="256"
-                                            fill="none"
-                                        ></rect>
-                                        <line
-                                            x1="56"
-                                            y1="232"
-                                            x2="200"
-                                            y2="232"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></line>
-                                        <circle
-                                            cx="128"
-                                            cy="104"
-                                            r="32"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></circle>
-                                        <path
-                                            d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ipisa, Italy</span
-                                >
-                            </div>
 
-                            <div class="flex items-center gap-x-1">
-                                <span class="flex items-center gap-x-1">
-                                    <span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="22"
-                                            fill="#16a34b"
-                                            viewBox="0 0 256 256"
-                                        >
-                                            <rect
-                                                width="256"
-                                                height="256"
-                                                fill="none"
-                                            ></rect>
-                                            <path
-                                                d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59-3.8a.5.5,0,0,1-.4-.3l-22-55.5a16.3,16.3,0,0,0-30.4,0l-22,55.5a.5.5,0,0,1-.4.3L31.4,86A16.4,16.4,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.2,37.6a.8.8,0,0,1,.2.8L53.9,207a18.6,18.6,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.8,16.8,0,0,0,9.5-3.1,16.6,16.6,0,0,0,6.3-17.7l-14.5-57.3a.8.8,0,0,1,.2-.8L234,115.5A16.8,16.8,0,0,0,239.2,97.4Zm-15.4,5.8-45.3,37.6a16.8,16.8,0,0,0-5.4,17l14.5,57.3c.1.4.1.5,0,.6a.7.7,0,0,1-.3.3h-.2L136.7,184a16,16,0,0,0-8.7-2.5V32c.1,0,.2,0,.3.3l22.1,55.5a16.4,16.4,0,0,0,14.1,10.4l59.1,3.8c.1,0,.2,0,.3.4S223.9,103.1,223.8,103.2Z"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                    <span class="font-semibold text-xs"
-                                        >4.5</span
-                                    >
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ratting</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div
-                        class="bg-white drop-shadow-xl rounded-lg p-3 /max-w-[250] my-8"
-                    >
-                        <img
-                            src="/assets/norway.jpg"
-                            alt=""
-                            class="rounded-lg min-w-full h-[250px]"
-                        />
-                        <div class="font-semibold mb-2 mt-3 text-gray-900">
-                            The Blue Mountain
-                        </div>
-                        <p class="text-sm mb-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consectetur, at.
-                        </p>
-                        <div
-                            class="flex items-center justify-between text-sm text-gray-900"
-                        >
-                            <div class="flex items-center gap-x-1">
-                                <span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        fill="#16a34b"
-                                        viewBox="0 0 256 256"
-                                    >
-                                        <rect
-                                            width="256"
-                                            height="256"
-                                            fill="none"
-                                        ></rect>
-                                        <line
-                                            x1="56"
-                                            y1="232"
-                                            x2="200"
-                                            y2="232"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></line>
-                                        <circle
-                                            cx="128"
-                                            cy="104"
-                                            r="32"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></circle>
-                                        <path
-                                            d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ipisa, Italy</span
-                                >
-                            </div>
 
-                            <div class="flex items-center gap-x-1">
-                                <span class="flex items-center gap-x-1">
-                                    <span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="22"
-                                            fill="#16a34b"
-                                            viewBox="0 0 256 256"
-                                        >
-                                            <rect
-                                                width="256"
-                                                height="256"
-                                                fill="none"
-                                            ></rect>
-                                            <path
-                                                d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59-3.8a.5.5,0,0,1-.4-.3l-22-55.5a16.3,16.3,0,0,0-30.4,0l-22,55.5a.5.5,0,0,1-.4.3L31.4,86A16.4,16.4,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.2,37.6a.8.8,0,0,1,.2.8L53.9,207a18.6,18.6,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.8,16.8,0,0,0,9.5-3.1,16.6,16.6,0,0,0,6.3-17.7l-14.5-57.3a.8.8,0,0,1,.2-.8L234,115.5A16.8,16.8,0,0,0,239.2,97.4Zm-15.4,5.8-45.3,37.6a16.8,16.8,0,0,0-5.4,17l14.5,57.3c.1.4.1.5,0,.6a.7.7,0,0,1-.3.3h-.2L136.7,184a16,16,0,0,0-8.7-2.5V32c.1,0,.2,0,.3.3l22.1,55.5a16.4,16.4,0,0,0,14.1,10.4l59.1,3.8c.1,0,.2,0,.3.4S223.9,103.1,223.8,103.2Z"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                    <span class="font-semibold text-xs"
-                                        >4.5</span
-                                    >
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ratting</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div
-                        class="bg-white drop-shadow-xl rounded-lg p-3 /max-w-[250] my-8"
-                    >
-                        <img
-                            src="/assets/norway.jpg"
-                            alt=""
-                            class="rounded-lg min-w-full h-[250px]"
-                        />
-                        <div class="font-semibold mb-2 mt-3 text-gray-900">
-                            The Blue Mountain
-                        </div>
-                        <p class="text-sm mb-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consectetur, at.
-                        </p>
-                        <div
-                            class="flex items-center justify-between text-sm text-gray-900"
-                        >
-                            <div class="flex items-center gap-x-1">
-                                <span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        fill="#16a34b"
-                                        viewBox="0 0 256 256"
-                                    >
-                                        <rect
-                                            width="256"
-                                            height="256"
-                                            fill="none"
-                                        ></rect>
-                                        <line
-                                            x1="56"
-                                            y1="232"
-                                            x2="200"
-                                            y2="232"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></line>
-                                        <circle
-                                            cx="128"
-                                            cy="104"
-                                            r="32"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></circle>
-                                        <path
-                                            d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z"
-                                            fill="none"
-                                            stroke="#16a34b"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="12"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ipisa, Italy</span
-                                >
-                            </div>
-
-                            <div class="flex items-center gap-x-1">
-                                <span class="flex items-center gap-x-1">
-                                    <span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="22"
-                                            fill="#16a34b"
-                                            viewBox="0 0 256 256"
-                                        >
-                                            <rect
-                                                width="256"
-                                                height="256"
-                                                fill="none"
-                                            ></rect>
-                                            <path
-                                                d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59-3.8a.5.5,0,0,1-.4-.3l-22-55.5a16.3,16.3,0,0,0-30.4,0l-22,55.5a.5.5,0,0,1-.4.3L31.4,86A16.4,16.4,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.2,37.6a.8.8,0,0,1,.2.8L53.9,207a18.6,18.6,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.8,16.8,0,0,0,9.5-3.1,16.6,16.6,0,0,0,6.3-17.7l-14.5-57.3a.8.8,0,0,1,.2-.8L234,115.5A16.8,16.8,0,0,0,239.2,97.4Zm-15.4,5.8-45.3,37.6a16.8,16.8,0,0,0-5.4,17l14.5,57.3c.1.4.1.5,0,.6a.7.7,0,0,1-.3.3h-.2L136.7,184a16,16,0,0,0-8.7-2.5V32c.1,0,.2,0,.3.3l22.1,55.5a16.4,16.4,0,0,0,14.1,10.4l59.1,3.8c.1,0,.2,0,.3.4S223.9,103.1,223.8,103.2Z"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                    <span class="font-semibold text-xs"
-                                        >4.5</span
-                                    >
-                                </span>
-                                <span class="font-semibold text-xs"
-                                    >Ratting</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </SplideSlide>
             </Splide>
         </div>
     </section>
