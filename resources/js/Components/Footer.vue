@@ -1,8 +1,9 @@
 
 <template>
+  <!-- "Our mission is to provide unparalleled travel experiences that exceed your expectations and create lifelong memories. We strive to make the planning process easy and enjoyable, while ensuring that every detail is taken care of. We are dedicated to providing personalized service and expert knowledge to help you discover the world in a way that is tailored to your unique interests and needs. Join us on a journey of a lifetime. " -->
   <footer class="text-gray-600 body-font bg-gray-100">
     <div
-      class="container px-5 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      class="container px-5 py-14 max-w-[1120px] mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
     >
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
         <Inertia-link
@@ -23,8 +24,8 @@
           </svg>
           <span class="ml-3 text-2xl font-marc font-semibold">Voyager</span>
         </Inertia-link>
-        <p class="mt-2 text-m text-gray-500">
-          Packing the best deals for the perfect journy at minimal cost.
+        <p class="mt-2 text-sm text-gray-500">
+          We strive to providing personalized service and expert knowledge to help you discover the world in a way that is tailored to your unique interests and needs.
         </p>
       </div>
       <div
@@ -112,9 +113,9 @@
       </div>
     </div>
     <div class="">
-      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <div class="container max-w-[1120px] mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
         <p class="text-gray-500 text-sm text-center sm:text-left font-medium">
-          © 2022 Voyager —
+          © 2023 Voyager —
           <Inertia-link
             href="https://twitter.com/knyttneve"
             rel="noopener noreferrer"

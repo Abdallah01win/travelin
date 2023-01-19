@@ -8,7 +8,7 @@
                 >
                     the best way to plan your trip around the world
                 </h1>
-                <p class="text-lg text-gray-600">
+                <p class="text-lg">
                     <!-- We are dedicated to providing you with the ultimate travel experience. Looking for a romantic getaway, a family vacation, or an adventure of a lifetime? we have the expertise and resources to make it happen. -->
                     We provide the ultimate travel experience. Let us take the stress out of planning your next adventure and book your dream trip today.
                 </p>

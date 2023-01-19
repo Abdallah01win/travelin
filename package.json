@@ -20,6 +20,7 @@
         "vue": "^3.2.31"
     },
     "dependencies": {
-        "@fawmi/vue-google-maps": "^0.9.72"
+        "@fawmi/vue-google-maps": "^0.9.72",
+        "@splidejs/vue-splide": "^0.6.12"
     }
 }

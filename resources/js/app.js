@@ -6,6 +6,7 @@ import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+import VueSplide from '@splidejs/vue-splide';
 import VueGoogleMaps from "@fawmi/vue-google-maps";
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
@@ -17,6 +18,7 @@ createInertiaApp({
         return createApp({ render: () => h(app, props) })
             .use(plugin)
             .use(ZiggyVue, Ziggy)
+            .use(VueSplide)
             .use(VueGoogleMaps, {
                 load: {
                     key: import.meta.env.VITE_GOOGLE_MAP_KEY,

@@ -8,7 +8,7 @@
 
     <div class="relative col-span-3">
       <img src="/assets/river.jpg" alt="" class="h-screen w-full" />
-      <div class="p-10 w-full absolute bottom-0 left-">
+      <div class="p-10 w-full absolute bottom-0">
         <div class="h-full bg-white p-8 rounded bg-opacity-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
