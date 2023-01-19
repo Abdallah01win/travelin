@@ -17,28 +17,28 @@
         <h2
           class="sm:leading-snug sm:text-5xl font-medium mb-4 text-gray-900 font-marc /*mx-52*/"
         >
-          Make your tours fun and memorable with us.
+        Experience enjoyable and unforgettable tours with us
         </h2>
-        <p class="lg:w-3/4 leading-relaxed text-xl text-gray-600 mb-6">
+        <p class="lg:w-[85%] leading-relaxed text-lg text-gray-600 mb-6">
           We will be part of your journy to all your desired destinations, to see all your
           needs met.
         </p>
         <div class="grid grid-cols-2 gap-y-6 gap-x-6">
           <div>
-            <div class="text-5xl text-green-500 font-marc font-medium mb-4">20</div>
-            <div class="text-gray-900 text-xl">Elite Airlines</div>
+            <div class="text-4xl text-green-500 font-marc font-medium mb-2">20</div>
+            <div>Elite Airlines</div>
           </div>
           <div>
-            <div class="text-5xl text-green-500 font-marc font-medium mb-4">90M+</div>
-            <div class="text-gray-900 text-xl">Satisfied Customers</div>
+            <div class="text-4xl text-green-500 font-marc font-medium mb-2">90K+</div>
+            <div>Satisfied Customers</div>
           </div>
           <div>
-            <div class="text-5xl text-green-500 font-marc font-medium mb-4">50+</div>
-            <div class="text-gray-900 text-xl">Holyday Packages</div>
+            <div class="text-4xl text-green-500 font-marc font-medium mb-2">50+</div>
+            <div>Holyday Packages</div>
           </div>
           <div>
-            <div class="text-5xl text-green-500 font-marc font-medium mb-4">120</div>
-            <div class="text-gray-900 text-xl">Luxury Hotels</div>
+            <div class="text-4xl text-green-500 font-marc font-medium mb-2">120</div>
+            <div>Luxury Hotels</div>
           </div>
           <button
             class="text-white bg-green-500 border-0 py-4 px-8 focus:outline-none hover:bg-green-600 rounded-xl text-xl font-semibold mt-2"

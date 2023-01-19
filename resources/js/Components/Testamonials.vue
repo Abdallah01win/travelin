@@ -12,7 +12,7 @@ export default {
 };
 </script>
 <template>
-    <section class="py-12 px-4 max-w-[1120px] mx-auto bg-gray-200 rounded-2xl">
+    <section class="py-12 px-4 max-w-[1120px] mx-auto bg-gray-100 rounded-2xl">
         <h3 class="font-marc text-4xl capitalize text-gray-900 text-center">
             What do customers think of our us?
         </h3>

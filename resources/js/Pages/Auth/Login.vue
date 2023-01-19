@@ -34,11 +34,30 @@ const submit = () => {
     <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
       {{ status }}
     </div>
-
-    <div class="text-3xl text-gray-900 font-marc my-3 font-semibold">Welcome Back!</div>
-    <p class="text-base text-gray-600 mb-5">
-      Nice to see you again. Please enter your details.
-    </p>
+    <div>
+      <Inertia-link
+        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 mr-7"
+        href="/"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-2xl font-marc font-semibold">Voyager</span>
+      </Inertia-link>
+      <div class="text-2xl text-gray-900 font-marc mt-4 mb-1 font-semibold">Welcome Back!</div>
+      <p class="text-base text-gray-600 mb-5">
+        Nice to see you again. Please enter your details.
+      </p>
+    </div>
 
     <form @submit.prevent="submit">
       <div>

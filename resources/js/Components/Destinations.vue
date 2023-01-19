@@ -27,10 +27,10 @@ export default {
     <section class="py-12 max-w-[1120px] mx-auto" id="destinations">
         <div class="flex items-center justify-between">
             <div>
-                <h3 class="font-marc text-4xl capitalize text-gray-900">
+                <h3 class="font-marc text-4xl capitalize text-gray-900 mb-2">
                     Top Destinations For You
                 </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Explore the best places to visit around the world.</p>
             </div>
             <div>
                 <div

@@ -4,7 +4,7 @@
             <Navigation class="bg-transparent absolute" />
             <div class="ml-8">
                 <h1
-                    class="font-marc text-6xl capitalize text-gray-900 mb-10 mt-44"
+                    class=" font-marc text-6xl capitalize text-gray-900 mb-10 mt-44"
                 >
                     the best way to plan your trip around the world
                 </h1>
