@@ -1,7 +1,7 @@
 <template>
   <header class="text-gray-600 w-full">
     <div
-      class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center px-6"
+      class=" flex flex-wrap py-5 flex-col md:flex-row items-center "
     >
       <Inertia-link
         class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 mr-7"
@@ -37,12 +37,12 @@
       <div v-if="!user">
         <Inertia-link
           href="login"
-          class="inline-flex items-center bg-transparant border border-white py-2 px-4 text-white focus:outline-none hover:text-gray-400 hover:border-gray-400 rounded text-base mt-4 md:mt-0 mr-7"
+          class="inline-flex items-center bg-transparant border border-white py-2 px-4 text-white hover:bg-white hover:text-gray-600 text-gray-600focus:outline-none rounded text-base mt-4 md:mt-0 mr-7"
           >Sign in
         </Inertia-link>
         <Inertia-link
           href="register"
-          class="inline-flex items-center bg-transparant border border-white py-2 px-4 text-white focus:outline-none hover:text-gray-400 hover:border-gray-400 rounded text-base mt-4 md:mt-0 mr-7"
+          class="inline-flex items-center bg-transparant border border-white py-2 px-4 text-white hover:bg-white hover:text-gray-600 focus:outline-none rounded text-base mt-4 md:mt-0"
           >Register
         </Inertia-link>
       </div>

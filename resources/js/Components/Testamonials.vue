@@ -12,9 +12,9 @@ export default {
 };
 </script>
 <template>
-    <section class="py-12 px-4 max-w-[1120px] mx-auto bg-gray-100 rounded-2xl">
+    <section class="py-12 px-4 max-w-[1120px] mx-auto bg-gray-100 rounded-2xl" id="testemonials">
         <h3 class="font-marc text-4xl capitalize text-gray-900 text-center">
-            What do customers think of our us?
+            What do customers think of us?
         </h3>
         <div>
             <Splide
@@ -164,7 +164,7 @@ export default {
 </template>
 
 <style>
-.splide__track {
-    --center-padding: 200px;
+#testemonials .splide__arrow{
+    padding: 8px;
 }
 </style>
