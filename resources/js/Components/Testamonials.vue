@@ -46,7 +46,7 @@ export default {
                         <a class="inline-flex items-center">
                             <img
                                 alt="testimonial"
-                                src="https://dummyimage.com/106x106"
+                                src="/assets/profiles/sarah.jpg"
                                 class="w-10 h-10 rounded-full flex-shrink-0 object-cover object-center"
                             />
                             <span
@@ -78,7 +78,7 @@ export default {
                         <a class="inline-flex items-center">
                             <img
                                 alt="testimonial"
-                                src="https://dummyimage.com/106x106"
+                                src="/assets/profiles/jhon.jpg"
                                 class="w-10 h-10 rounded-full flex-shrink-0 object-cover object-center"
                             />
                             <span
@@ -110,7 +110,7 @@ export default {
                         <a class="inline-flex items-center">
                             <img
                                 alt="testimonial"
-                                src="https://dummyimage.com/106x106"
+                                src="/assets/profiles/emma.jpg"
                                 class="w-10 h-10 rounded-full flex-shrink-0 object-cover object-center"
                             />
                             <span
@@ -142,7 +142,7 @@ export default {
                         <a class="inline-flex items-center">
                             <img
                                 alt="testimonial"
-                                src="https://dummyimage.com/106x106"
+                                src="/assets/profiles/mecheal.jpg"
                                 class="w-10 h-10 rounded-full flex-shrink-0 object-cover object-center"
                             />
                             <span
