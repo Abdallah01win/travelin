@@ -60,12 +60,12 @@ export default {
                         <img
                             src="/assets/norway.jpg"
                             alt=""
-                            class="rounded-lg min-w-full h-[250px]"
+                            class="rounded-lg min-w-full h-[220px]"
                         />
                         <div class="font-semibold mb-2 mt-3 text-gray-900">
                             Norway's Fjords
                         </div>
-                        <p class="text-sm mb-3">
+                        <p class="text-sm mb-3 leading-relaxed">
                             Offer spectacular scenery and a wide range of activities, making them a perfect destination for outdoor enthusiasts.
                         </p>
                         <div
@@ -157,12 +157,12 @@ export default {
                         <img
                             src="/assets/canada.jpg"
                             alt=""
-                            class="rounded-lg min-w-full h-[250px]"
+                            class="rounded-lg min-w-full h-[220px]"
                         />
                         <div class="font-semibold mb-2 mt-3 text-gray-900">
                             Canadian lakes
                         </div>
-                        <p class="text-sm mb-3">
+                        <p class="text-sm mb-3 leading-relaxed">
                             Wether you're into swimming, boating, or camping, they're a perfect destination for those looking for a peaceful getaway.
                         </p>
                         <div
@@ -254,12 +254,12 @@ export default {
                         <img
                             src="/assets/italy.jpg"
                             alt=""
-                            class="rounded-lg min-w-full h-[250px]"
+                            class="rounded-lg min-w-full h-[220px]"
                         />
                         <div class="font-semibold mb-2 mt-3 text-gray-900">
                             Manarola City
                         </div>
-                        <p class="text-sm mb-3">
+                        <p class="text-sm mb-3 leading-relaxed">
                             The perfect destination for its unique blend of ruins, art and local life. It is perfect for Italian history, art and food enthusiasts.
                         </p>
                         <div
@@ -351,12 +351,12 @@ export default {
                         <img
                             src="/assets/Santorini.jpg"
                             alt=""
-                            class="rounded-lg min-w-full h-[250px]"
+                            class="rounded-lg min-w-full h-[220px]"
                         />
                         <div class="font-semibold mb-2 mt-3 text-gray-900">
                             Santorini City
                         </div>
-                        <p class="text-sm mb-3">
+                        <p class="text-sm mb-3 leading-relaxed">
                             Santorini is ideal for a romantic getaway, unwind and learn about culture due to its picturesque views and serene beaches.
                         </p>
                         <div
@@ -448,12 +448,12 @@ export default {
                         <img
                             src="/assets/vally.jpg"
                             alt=""
-                            class="rounded-lg min-w-full h-[250px]"
+                            class="rounded-lg min-w-full h-[220px]"
                         />
                         <div class="font-semibold mb-2 mt-3 text-gray-900">
                             The Blue Mountain
                         </div>
-                        <p class="text-sm mb-3">
+                        <p class="text-sm mb-3 leading-relaxed">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Consectetur, at.
                         </p>
@@ -546,12 +546,12 @@ export default {
                         <img
                             src="/assets/argentina.jpg"
                             alt=""
-                            class="rounded-lg min-w-full h-[250px]"
+                            class="rounded-lg min-w-full h-[220px]"
                         />
                         <div class="font-semibold mb-2 mt-3 text-gray-900">
                             The Blue Mountain
                         </div>
-                        <p class="text-sm mb-3">
+                        <p class="text-sm mb-3 leading-relaxed">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Consectetur, at.
                         </p>
